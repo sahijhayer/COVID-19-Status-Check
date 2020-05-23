@@ -71,6 +71,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 	Chart.defaults.global.defaultFontColor = 'HoneyDew';
 	
 	var ctx = document.getElementById('chart').getContext('2d');
+
 	var chart = new Chart(ctx, {
 		// The type of chart we want to create
 		type: 'line',
@@ -81,19 +82,26 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 			datasets: [{
 				label: 'Number of Confirmed Cases',
 				borderColor: 'rgb(256,256,256)',
-				data: total				
+				data: total		
 
-			}
+			},
+			{},
+			{},
+			{},
+				
 			]
 		},
 
 		// Configuration options go here
 		options: {
+
+			maintainAspectRatio: false,
+
 			layout: {
 				padding: {
                 left: 50,
-                right: 0,
-                top: 0,
+                right: 20,
+                top: 20,
                 bottom: 0
 				}
 			}
@@ -119,7 +127,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 			chart.data.datasets.splice(1,1);
 		}
 		else{
-			chart.data.datasets.splice(1,0,{
+			chart.data.datasets.splice(1,1,{
 				label: 'Number of Active Cases',
 				borderColor: 'rgb(68,166,198)',
 				data: cases
@@ -142,7 +150,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 			chart.data.datasets.splice(3,1);
 		}
 		else{
-			chart.data.datasets.splice(3,0,{
+			chart.data.datasets.splice(3,1,{
 					label: 'Number of Recovered Cases',
 					borderColor: 'rgb(117,204,88)',
 					data: recovered
@@ -165,7 +173,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 			chart.data.datasets.splice(2,1);
 		}
 		else{
-			chart.data.datasets.splice(2,0,{
+			chart.data.datasets.splice(2,1,{
 				label: 'Number of Deaths',
 				borderColor: 'rgb(198,68,101)',
 				data: deaths
