@@ -20,11 +20,15 @@
 <div id="chart-container" style="position: relative; height:90vh; width:80vw">
     <canvas id="chart"></canvas>
 </div>
-
+<p class="text-light graph-settings" id="graph-settings" >Graph Settings:</p>
 <button class = "btn btn-primary active" id = "active" onclick="updateChart()">Active Cases</button>
 <button class = "btn btn-danger deaths" id="deaths" onclick="updateChart()">Deaths</button>
 <button class = "btn btn-success recovered" id = "recovered" onclick="updateChart()">Recovered Cases</button>
-
+<p class="text-light live-counter" id="live-counter" >Live Statistics:</p>
+<p class="text-light total-counter" id="total-counter" >Confirmed Cases:</p>
+<p class="text-light active-counter" id="active-counter" >Active Cases:</p>
+<p class="text-light deaths-counter" id="deaths-counter" >Deaths:</p>
+<p class="text-light recovered-counter" id="recovered-counter" >Recovered Cases:</p>
 
 
 <script src="script.js"></script>

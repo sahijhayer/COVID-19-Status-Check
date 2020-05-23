@@ -69,6 +69,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 		labels.push(startDate);
 	}
 	Chart.defaults.global.defaultFontColor = 'HoneyDew';
+
 	
 	var ctx = document.getElementById('chart').getContext('2d');
 
@@ -85,9 +86,9 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 				data: total		
 
 			},
-			{},
-			{},
-			{},
+			{label: ""},
+			{label: ""},
+			{label: ""},
 				
 			]
 		},
@@ -124,7 +125,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 		}
 
 		if (checkIf){
-			chart.data.datasets.splice(1,1);
+			chart.data.datasets.splice(1,1, {label: ""});
 		}
 		else{
 			chart.data.datasets.splice(1,1,{
@@ -147,7 +148,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 		}
 
 		if (checkIf){
-			chart.data.datasets.splice(3,1);
+			chart.data.datasets.splice(3,1, {label: ""});
 		}
 		else{
 			chart.data.datasets.splice(3,1,{
@@ -170,7 +171,7 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 		}
 
 		if (checkIf){
-			chart.data.datasets.splice(2,1);
+			chart.data.datasets.splice(2,1, {label: ""});
 		}
 		else{
 			chart.data.datasets.splice(2,1,{
@@ -200,8 +201,11 @@ input.addEventListener("keyup", function(event){
    document.getElementById("active").style.visibility = "visible";
    document.getElementById("recovered").style.visibility = "visible";
    document.getElementById("deaths").style.visibility = "visible";
-   
-   
-
+   document.getElementById("graph-settings").style.visibility = "visible";
+   document.getElementById("live-counter").style.visibility = "visible";   
+   document.getElementById("total-counter").style.visibility = "visible";   
+   document.getElementById("recovered-counter").style.visibility = "visible";   
+   document.getElementById("deaths-counter").style.visibility = "visible";   
+   document.getElementById("active-counter").style.visibility = "visible";   
   }
 });

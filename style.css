@@ -6,7 +6,7 @@ body {
 }
 
 .background {
-  position: absolute;
+  position: relative;
   display: block;
   top: 0;
   left: 0;
@@ -14,18 +14,76 @@ body {
 }
 
 button.active{
+	position: relative;
+	top: -88.5vh;
+	left: 79.5vw;
 	visibility: hidden;
 }
 button.deaths{
+	position: relative;
+	top: -88.5vh;
+	left: 80vw;
 	visibility: hidden;
 }
 
 button.recovered{
+	position: relative;
+	top: -88.5vh;
+	left: 80.5vw;
 	visibility: hidden;
 }
 
 .countryName {
 	
+}
+
+.graph-settings {
+	position: relative;
+	font-size: 14px;
+	top: -87vh;
+	left: 79.6vw;
+	visibility: hidden;
+
+}
+.live-counter{
+	position: relative;
+	font-size: 20px;
+	top: -86vh;
+	left: 79.5vw;
+	visibility: hidden;
+
+}
+.total-counter{
+	position: relative;
+	font-size: 16px;
+	top: -85vh;
+	left: 79.5vw;
+	visibility: hidden;
+
+}
+.active-counter{
+	position: relative;
+	font-size: 16px;
+	top: -73vh;
+	left: 79.5vw;
+	visibility: hidden;
+
+}
+.deaths-counter{
+	position: relative;
+	font-size: 16px;
+	top: -61vh;
+	left: 79.5vw;
+	visibility: hidden;
+
+}
+.recovered-counter{
+	position: relative;
+	font-size: 16px;
+	top: -49vh;
+	left: 79.5vw;
+	visibility: hidden;
+
 }
 
 input.transparent-input{
