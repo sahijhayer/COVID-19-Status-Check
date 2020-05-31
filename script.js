@@ -35,7 +35,10 @@ const checkCountry = () => {
 				recovered.push(day["Recovered"]);
 				date.push(day["Date"]);
 			}
-
+			document.getElementById("active-number").innerHTML = cases[data.length-1];
+			document.getElementById("deaths-number").innerHTML = deaths[data.length-1];
+			document.getElementById("total-number").innerHTML = total[data.length-1];
+			document.getElementById("recovered-number").innerHTML = recovered[data.length-1];
 			createGraph(total, cases, deaths, recovered, date);
 			
 		  })
@@ -207,5 +210,9 @@ input.addEventListener("keyup", function(event){
    document.getElementById("recovered-counter").style.visibility = "visible";   
    document.getElementById("deaths-counter").style.visibility = "visible";   
    document.getElementById("active-counter").style.visibility = "visible";   
+   document.getElementById("active-number").style.visibility = "visible"; 
+   document.getElementById("deaths-number").style.visibility = "visible"; 
+   document.getElementById("recovered-number").style.visibility = "visible"; 
+   document.getElementById("total-number").style.visibility = "visible"; 
   }
 });

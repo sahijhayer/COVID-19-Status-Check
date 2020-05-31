@@ -1,11 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	overflow: hidden;
+	
+}
+
+html {
+	height: 100%;
+	width: 100%;
+	
+}
+
 body {
-  margin: 0;
-  padding: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  clear: both;
   background-image: url("bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
 }
 
 .background {
+
   position: relative;
   display: block;
   top: 0;
@@ -64,7 +88,7 @@ button.recovered{
 .active-counter{
 	position: relative;
 	font-size: 16px;
-	top: -73vh;
+	top: -81vh;
 	left: 79.5vw;
 	visibility: hidden;
 
@@ -72,7 +96,7 @@ button.recovered{
 .deaths-counter{
 	position: relative;
 	font-size: 16px;
-	top: -61vh;
+	top: -77vh;
 	left: 79.5vw;
 	visibility: hidden;
 
@@ -80,12 +104,46 @@ button.recovered{
 .recovered-counter{
 	position: relative;
 	font-size: 16px;
-	top: -49vh;
+	top: -73vh;
 	left: 79.5vw;
 	visibility: hidden;
 
 }
 
+.active-number{
+	position: relative;
+	font-size: 50px;
+	top: -81vh;
+	left: 79.5vw;
+	visibility: hidden;
+	
+}
+.deaths-number{
+	position: relative;
+	font-size: 50px;
+	top: -77vh;
+	left: 79.5vw;
+	visibility: hidden;
+	
+}
+
+.total-number{
+	position: relative;
+	font-size: 50px;
+	top: -85vh;
+	left: 79.5vw;
+	visibility: hidden;
+
+	
+}
+.recovered-number{
+	position: relative;
+	font-size: 50px;
+	top: -73vh;
+	left: 79.5vw;
+	visibility: hidden;
+	
+}
 input.transparent-input{
    background-color:transparent !important;
    color: "HoneyDew";
