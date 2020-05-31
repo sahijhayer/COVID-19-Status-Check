@@ -27,7 +27,20 @@ body {
   background-position: center;
 
 }
-
+.homepage{
+	position:relative;
+	left: 35vw;
+	top: 10vh;
+	visibility: visible;
+}
+h1{
+	position:relative;
+	font-size: 60px;
+	color: HoneyDew;
+	left: 34vw;
+	top: 10vh;
+	visibility: visible;
+}	
 .background {
 
   position: relative;

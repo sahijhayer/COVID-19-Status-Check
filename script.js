@@ -201,6 +201,8 @@ input.addEventListener("keyup", function(event){
   if (event.keyCode === 13) {
    event.preventDefault();
    checkCountry();
+   document.getElementById("homepage").remove();
+   document.getElementById("title").remove();
    document.getElementById("active").style.visibility = "visible";
    document.getElementById("recovered").style.visibility = "visible";
    document.getElementById("deaths").style.visibility = "visible";
