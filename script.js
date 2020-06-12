@@ -4,7 +4,7 @@ const checkCountry = () => {
 		const country = document.getElementById("country").value;
 
 		for(let i = 0; i < data.length; i++){
-			if (data[i]["Country"].toUpperCase().includes(country.toUpperCase())){
+			if (data[i]["Country"].toUpperCase()===country.toUpperCase()){
 				return [data[i]["Country"],data[i]["Slug"]];
 			}
 		}
@@ -78,10 +78,9 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 	var ctx = document.getElementById('chart').getContext('2d');
 
 	var chart = new Chart(ctx, {
-		// The type of chart we want to create
+
 		type: 'line',
 
-		// The data for our dataset
 		data: {
 			labels: labels,
 			datasets: [{
@@ -97,7 +96,6 @@ const createGraph = (total, cases, deaths, recovered, date) => {
 			]
 		},
 
-		// Configuration options go here
 		options: {
 
 			maintainAspectRatio: false,
@@ -197,7 +195,26 @@ const resetCanvas = () => {
    document.getElementById("chart-container").innerHTML='<canvas id="chart"></canvas>';
 
 };
+
+const searchOptions = () => {
+	fetch('https://api.covid19api.com/countries')
+	  .then(response => {
+		return response.json()
+	  })
+	  .then(data => {
+		  for (let i = 0; i < data.length; i++){
+			  let name = document.createElement("OPTION");
+			  name.setAttribute("value", data[i]["Country"]);
+			  document.getElementById("countries").appendChild(name);
+		  }
+	  })
+	  .catch(err => {
+
+	  })
+}
+
 let input = document.getElementById("country");
+input.addEventListener("keyup", searchOptions())
 input.addEventListener("keyup", function(event){
   if (event.keyCode === 13) {
    event.preventDefault();
