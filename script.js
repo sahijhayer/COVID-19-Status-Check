@@ -1,3 +1,4 @@
+
 const checkCountry = () => {
 	const countryInput = (data) => {
 		const country = document.getElementById("country").value;

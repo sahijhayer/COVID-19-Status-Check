@@ -6,39 +6,44 @@
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
-	overflow: hidden;
-	
+	overflow: hidden; 
+
 }
 
 html {
 	height: 100%;
 	width: 100%;
 	
+	
 }
 
+
+.title{
+	text-align: center;
+}
 body {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  clear: both;
-  background-image: url("bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+	
+	position: relative;
+	height: 100%;
+	width: 100%;
+	clear: both;
+	background-image: url("bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 
 }
+
 .homepage{
-	position:relative;
-	left: 35vw;
-	top: 10vh;
-	visibility: visible;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
 }
 h1{
 	position:relative;
 	font-size: 60px;
 	color: HoneyDew;
-	left: 34vw;
-	top: 10vh;
 	visibility: visible;
 }	
 .background {

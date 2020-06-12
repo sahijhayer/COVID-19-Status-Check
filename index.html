@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="all">
 <head>
 	
 	<link rel="icon" href="icon.png" type="image/x-icon">
@@ -9,7 +9,7 @@
 	<title>COVID-19</title>
 	
 </head>
-<body>
+<body id="body">
 <div class="input-group input-group-lg">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-lg">Country Name</span>
@@ -17,7 +17,7 @@
   <input type="text" id="country" class="form-control text-light transparent-input" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 </div>
 <img class="homepage" id="homepage" src="icon.png">
-<h1 id="title">COVID-19 Status Check</h1>
+<h1 id="title" class="position-relative title">COVID-19 Status Check</h1>
 <div id="chart-container" style="position: relative; height:90vh; width:80vw">
     <canvas id="chart"></canvas>
 </div>
@@ -40,3 +40,4 @@
 <script src="script.js"></script>
 
 </body>
+</html>
